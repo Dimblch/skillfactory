@@ -9,7 +9,7 @@ from config import keys
 class APIException(Exception):
     pass
 
-class Convert():
+class Convert:
     @staticmethod
     def get_price(base: str, quote: str, amount: str):
         if quote == base:

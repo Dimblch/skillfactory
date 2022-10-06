@@ -2,7 +2,7 @@
 #
 # Файл с токеном бота и списком валют
 
-TOKEN = '5594831764:AAHRFCxmvjqSB_mZEI4atfJtTGhew00xWjA'
+TOKEN = 'past_your_telegram_bot_token'
 keys = {
     'доллар': 'USD',
     'евро': 'EUR',
