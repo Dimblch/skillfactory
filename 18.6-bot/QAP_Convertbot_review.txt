@@ -19,7 +19,7 @@
 4. Бот при расчёте конвертации путает валюты между собой. Для исправления можно в файле extensions.py поправить строки 33 и 34
     ожидаемо: f'https://min-api.cryptocompare.com/data/price?fsym={quote_ticker}&tsyms={base_ticker}')
               total_base = float(json.loads(r.content)[keys[base]])
-    фактически: 33 f'https://min-api.cryptocompare.com/data/price?fsym={base_ticker}&tsyms={quote_ticker}')
+    фактически: f'https://min-api.cryptocompare.com/data/price?fsym={base_ticker}&tsyms={quote_ticker}')
                 total_base = float(json.loads(r.content)[keys[quote]])
 
 5. В файле app.py в строке 49 бот запускается без параметра "none_stop=True"
