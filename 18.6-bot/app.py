@@ -4,7 +4,7 @@
 
 import telebot
 from config import keys, TOKEN
-from extensions import APIException, get_price
+from extensions import APIException, Convert
 
 
 bot = telebot.TeleBot(TOKEN)
@@ -34,7 +34,7 @@ def convert(message: telebot.types.Message):
             raise APIException('Неверное количество параметров, подробнее в /help')
 
         base, quote, amount = values
-        total = get_price.convert(base, quote, amount)
+        total = Convert.get_price(base, quote, amount)
 
     except APIException as e:
         bot.reply_to(message, f'Ошибка пользователя:\n{e}')

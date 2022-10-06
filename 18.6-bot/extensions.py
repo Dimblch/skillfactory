@@ -9,9 +9,9 @@ from config import keys
 class APIException(Exception):
     pass
 
-class get_price():
+class Convert():
     @staticmethod
-    def convert(base: str, quote: str, amount: str):
+    def get_price(base: str, quote: str, amount: str):
         if quote == base:
             raise APIException('А смысл конвертировать само в себя?')
 
